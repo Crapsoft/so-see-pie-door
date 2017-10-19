@@ -112,9 +112,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Place.cpp" />
     <ClCompile Include="Plane.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Place.h" />
     <ClInclude Include="Plane.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
