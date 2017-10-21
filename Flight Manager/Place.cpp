@@ -1,31 +1,34 @@
 #include "Place.h"
 
 
+Place::Place(string _Place_number) {
+	Place_number = _Place_number;
+	availability = true;
 
-Place::Place():Place_number("incognito"), availability()
-{
 }
-Place::Place(string _Place_number, bool availability) : Place_number(_Place_number), availability(_availability)
-{}
-string Place::getPlace_number()const
-{
-	return Place_number;
+
+Place::Place(string _Place_number, bool _availability) {
+	Place_number.assign(Place_number);
+	availability = _availability;
 }
-void Place::setPlace_number(string _number)
-{
+
+void Place::setPlace_number(string _number) {
 	Place_number.assign(_number);
 }
-bool Place::availability()const
-{
-	return availability;
-}
-void Place::availability(bool availability)
-{
-	availability.assign(availability);
+
+string Place::getPlace_number()const {
+	return Place_number;
 }
 
-Place::~Place()
-{
+bool Place::getAvailability()const {
+	return availability;
+}
+
+void Place::setAvailability(bool _availability) {
+	availability = _availability;
+}
+
+Place::~Place() {
 	Place_number = "";
 	availability = true;
 }
