@@ -25,12 +25,12 @@ public:
 	string getPhonenumber()const;
 	//Setters
 	void setName(string _name);	
-	void setSurname(string _Passenger_surname);	
+	void setSurname(string _surname);	
 	void setSex(string _sex);
 	void setNationality(string _nationality);
-	void setPassport_No(int _passportNo);
-	void setDate_of_Birth(int _date_of_Birth);
-	void setPhonenumber(int _phonenumber);
+	void setPassport_No(string _passportNo);
+	void setDate_of_Birth(string _date_of_Birth);
+	void setPhonenumber(string _phonenumber);
 	//Other
 	void PassangerInfo();
 	~Passenger();
