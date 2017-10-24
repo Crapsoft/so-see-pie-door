@@ -1,46 +1,79 @@
 #include <iostream>
 #include "Airport.h"
 using namespace std;
-Airport::Airport() :Airport_Name("incognito"), Airport_Location("incognito"), Airport_Airline("incognito"), Airport_Contacts(0)
-{}
-Airport::Airport(string _Airport_Name, string _Airport_Location, string _Airport_Airline, int _Airport_Contacts) : Airport_Name(_Airport_Name), Airport_Location(_Airport_Location), Airport_Airline(_Airport_Airline), Airport_Contacts(_Airport_Contacts)
-{}
-string Airport::getAirport_Name()const
-{
-	return Airport_Name;
+
+Airport::Airport() {
+	name.assign("");
+	location.assign("");
+	contacts = 0;
 }
-void Airport::setAirport_Name(string _Airport_Name)
+//Without init vector of airlines
+Airport::Airport(string _name, string _location, int _contacts)
 {
-	Airport_Name.assign(_Airport_Name);
+	name = _name;
+	location = _location;
+	contacts = _contacts;
 }
-string Airport::getAirport_Location()const
+//with init vector of airlines
+Airport::Airport(string _name, string _location, vector<string> _airlines, int _contacts)
 {
-	return Airport_Location;
+	name = _name;
+	location = _location;
+	airlines = _airlines;
+	contacts = _contacts;
 }
-void Airport::setAirport_Location(string _Airport_Location)
+
+
+string Airport::getName()const
 {
-	Airport_Location.assign(_Airport_Location);
+	return name;
 }
-string Airport::getAirport_Airline()const
+void Airport::setAirport_Name(string _name)
 {
-	return Airport_Airline;
+	name.assign(_name);
 }
-void Airport::setAirport_Airline(string _Airport_Airline)
+
+
+string Airport::getLocation()const
 {
-	Airport_Airline.assign(_Airport_Airline);
+	return location;
 }
-int Airport::getAirport_Contacts()const
+void Airport::setLocation(string _location)
 {
-	return Airport_Contacts;
+	location.assign(_location);
 }
-void Airport::setAirport_Contacts(int _Airport_Contacts)
+
+
+vector<string> Airport::getAirlines()const
 {
-	Airport_Contacts = _Airport_Contacts;
+	return airlines;
 }
+void Airport::setAirlines(vector<string> _Airlines)
+{
+	for each (string var in _Airlines)
+	{
+		airlines.push_back(var);
+	}
+}
+void Airport::addAirline(string airline) {
+	airlines.push_back(airline);
+}
+
+
+int Airport::getContacts()const
+{
+	return contacts;
+}
+void Airport::setContacts(int _contacts)
+{
+	contacts = _contacts;
+}
+
+
 Airport::~Airport()
 {
-	Airport_Name = " ";
-	Airport_Location = " ";
-	Airport_Airline = " ";
-	Airport_Contacts = 0;
+	name.assign("");
+	location.assign("");
+	airlines.clear();
+	contacts = 0;
 }

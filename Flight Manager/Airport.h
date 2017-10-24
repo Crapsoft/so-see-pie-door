@@ -1,23 +1,29 @@
 #pragma once
 #include <iostream>
 #include <string>;
+#include <vector>
 using namespace std;
 class Airport {
-protected:
-	string Airport_Name;
-	string Airport_Location;
-	string Airport_Airline;
-	int Airport_Contacts;
+private:
+	string name;
+	string location;
+	vector<string> airlines;
+	int contacts;
 public:
 	Airport();
-	Airport(string _Airport_Name, string _Airport_Location, string _Airport_Airline, int _Airport_Contacts);
-	string getAirport_Name()const;
-	void setAirport_Name(string _Airport_Name);
-	string getAirport_Location()const;
-	void setAirport_Location(string _Airport_Location);
-	string getAirport_Airline()const;
-	void setAirport_Airline(string _Airport_Airline);
-	int getAirport_Contacts()const;
-	void setAirport_Contacts(int _Airport_Contacts);
+	Airport(string _name, string _location, int _contacts);
+	Airport(string _name, string _location, vector<string> _airlines, int _contacts);
+	//Getters
+	string getName()const;
+	string getLocation()const;
+	vector<string> getAirlines()const;
+	int Airport::getContacts()const;
+	//Setters
+	void setAirport_Name(string _name);
+	void setLocation(string _location);
+	void setAirlines(vector<string> _Airlines);
+	void setContacts(int _Airport_Contacts);
+	//other
+	void addAirline(string airline);	
 	~Airport();
 };

@@ -1,73 +1,123 @@
-#include <iostream>
 #include "Passenger.h"
+
 using namespace std;
-Passenger::Passenger() :Passenger_Name("incognito"), Passenger_Surname("incognito"), Passenger_Gender("incognito"), Passenger_Nationality("incognito"), Passenger_Passport_No(0), Passenger_Date_of_Birth(0), Passenger_Phone_number(0)
-{}
-Passenger::Passenger(string _Passenger_Name, string _Passenger_Surname, string _Passenger_Gender, string _Passenger_Nationality, int _Passenger_Passport_No, int _Passenger_Date_of_Birth, int _Passenger_Phone_number) : Passenger_Name(_Passenger_Name), Passenger_Surname(_Passenger_Surname), Passenger_Gender(_Passenger_Gender), Passenger_Nationality(_Passenger_Nationality), Passenger_Passport_No(_Passenger_Passport_No), Passenger_Date_of_Birth(_Passenger_Date_of_Birth), Passenger_Phone_number(_Passenger_Phone_number)
-{}
-string Passenger::getPassenger_Name()const
+
+
+Passenger::Passenger() :name(""), surname(""),sex(""),passport_No(""),date_of_Birth(""),phonenumber("")
 {
-	return Passenger_Name;
+
 }
-void Passenger::setPassenger_Name(string _Name)
+
+Passenger::Passenger(string _name, string _surname, string _sex, string _nationality, string _passport_No, string _date_of_Birth, string _phonenumber) 
 {
-	Passenger_Name.assign(_Name);
+	name.assign(_name);
+	surname.assign(_surname);
+	sex.assign(_sex);
+	nationality.assign(_nationality);
+	passport_No.assign(_passport_No);
+	date_of_Birth.assign(_date_of_Birth);
+	phonenumber.assign(_phonenumber);
 }
-string Passenger::getPassenger_Surname()const
+
+
+
+string Passenger::getName()const
 {
-	return Passenger_Surname;
+	return name;
 }
-void Passenger::setPassenger_Surname(string _Surname)
+
+void Passenger::setName(string _name)
 {
-	Passenger_Surname.assign(_Surname);
+	name.assign(_name);
 }
-string Passenger::getPassenger_Gender()const
+
+
+
+string Passenger::getSurname()const
 {
-	return Passenger_Gender;
+	return surname;
 }
-void Passenger::setPassenger_Gender(string _Gender)
+
+void Passenger::setSurname(string _surname)
 {
-	Passenger_Surname.assign(_Gender);
+	surname.assign(_surname);
 }
-string Passenger::getPassenger_Nationality()const
+
+
+string Passenger::getSex()const
 {
-	return Passenger_Nationality;
+	return sex;
 }
-void Passenger::setPassenger_Nationality(string _Nationality)
+
+void Passenger::setSex(string _sex)
 {
-	Passenger_Surname.assign(_Nationality);
+	sex.assign(_sex);
 }
-int Passenger::getPassenger_Passport_No()const
+
+
+
+string Passenger::getNationality()const
 {
-	return Passenger_Passport_No;
+	return nationality;
 }
-void Passenger::setPassenger_Passport_No(int _Passport_No)
+
+void Passenger::setNationality(string _nationality)
 {
-	Passenger_Passport_No = _Passport_No;
+	nationality.assign(_nationality);
 }
-int Passenger::getPassenger_Date_of_Birth()const
+
+
+
+string Passenger::getPassport_No()const
 {
-	return Passenger_Date_of_Birth;
+	return passport_No;
 }
-void Passenger::setPassenger_Date_of_Birth(int _Date_of_Birth)
+
+void Passenger::setPassport_No(string _passportNo)
 {
-	Passenger_Date_of_Birth = _Date_of_Birth;
+	passport_No.assign(_passportNo);
 }
-int Passenger::getPassenger_Phone_number()const
+
+
+string Passenger::getDate_of_Birth()const
 {
-	return Passenger_Phone_number;
+	return date_of_Birth;
 }
-void Passenger::setPassenger_Phone_number(int _Phone_number)
+
+void Passenger::setDate_of_Birth(string _date_of_Birth)
 {
-	Passenger_Phone_number = _Phone_number;
+	date_of_Birth.assign(_date_of_Birth);
 }
+
+
+
+string Passenger::getPhonenumber()const
+{
+	return phonenumber;
+}
+
+void Passenger::setPhonenumber(string _phonenumber)
+{
+	phonenumber.assign(_phonenumber);
+}
+
+void Passenger::PassangerInfo() {
+	cout << "Name: " << name<<endl;
+	cout << "Surname: " << surname << endl;
+	cout << "Sex: " << sex << endl;
+	cout << "Nationality: " << nationality << endl;
+	cout << "Passport Number: " << passport_No << endl;
+	cout << "B-Day: " << date_of_Birth << endl;
+
+}
+
 Passenger::~Passenger()
 {
-	Passenger_Name = " ";
-	Passenger_Surname = " ";
-	Passenger_Gender = " ";
-	Passenger_Nationality = " ";
-	Passenger_Passport_No = 0;
-	Passenger_Date_of_Birth = 0;
-	Passenger_Phone_number = 0;
+	name = "";
+	surname = "";
+	sex = "";
+	nationality = "";
+	passport_No = "";
+	date_of_Birth = "";
+	phonenumber = "";
 }

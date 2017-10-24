@@ -1,32 +1,37 @@
 #pragma once
 #include <iostream>
-#include <string>;
+#include <string>
 using namespace std;
 class Passenger {
 protected:
-	string Passenger_Name;
-	string Passenger_Surname;
-	string Passenger_Gender;
-	string Passenger_Nationality;
-	int Passenger_Passport_No;
-	int Passenger_Date_of_Birth;
-	int Passenger_Phone_number;
+	string name;
+	string surname;
+	string sex;
+	string nationality;
+	string passport_No;
+	string date_of_Birth;
+	string phonenumber;
 public:
+	//Constructors
 	Passenger();
-	Passenger(string _Passenger_Name, string _Passenger_Surname, string _Passenger_Gender, string _Passenger_Nationality, int _Passenger_Passport_No, int _Passenger_Date_of_Birth, int _Passenger_Phone_number);
-	string getPassenger_Name()const;
-	void setPassenger_Name(string _Passenger_Name);
-	string getPassenger_Surname()const;
-	void setPassenger_Surname(string _Passenger_Surname);
-	string getPassenger_Gender()const;
-	void setPassenger_Gender(string _Passenger_Gender);
-	string getPassenger_Nationality()const;
-	void setPassenger_Nationality(string _Passenger_Nationality);
-	int getPassenger_Passport_No()const;
-	void setPassenger_Passport_No(int _Passenger_Passport_No);
-	int getPassenger_Date_of_Birth()const;
-	void setPassenger_Date_of_Birth(int _Passenger_Date_of_Birth);
-	int getPassenger_Phone_number()const;
-	void setPassenger_Phone_number(int _Passenger_Phone_number);
+	Passenger(string _name, string _surname, string _sex, string _nationality, string _passport_No, string _date_of_Birth, string _phonenumber);
+	//Getters
+	string getName()const;
+	string getSurname()const;
+	string getSex()const;
+	string getNationality()const;
+	string getPassport_No()const;
+	string getDate_of_Birth()const;
+	string getPhonenumber()const;
+	//Setters
+	void setName(string _name);	
+	void setSurname(string _surname);	
+	void setSex(string _sex);
+	void setNationality(string _nationality);
+	void setPassport_No(string _passportNo);
+	void setDate_of_Birth(string _date_of_Birth);
+	void setPhonenumber(string _phonenumber);
+	//Other
+	void PassangerInfo();
 	~Passenger();
 };

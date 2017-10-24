@@ -5,15 +5,25 @@
 
 using namespace std;
 
-class Place{
+class Place {
 protected:
 	string Place_number;
-	bool availability;			// 0 - empty seat
+	bool availability;			// true means that place is free, false - place has been reserved or bought
 public:
-	Place();
+	//contructors
+
+	Place(string _Place_number);
 	Place(string _Place_number, bool _availability);
-	string getPlace_number()const;
+
+	//setters
+
 	void setPlace_number(string _Place_number);
+	void setAvailability(bool _availability);
+
+	//getters
+
+	string getPlace_number()const;
+	bool getAvailability()const;
+
 	~Place();
 };
-
