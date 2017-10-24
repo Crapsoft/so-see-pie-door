@@ -111,11 +111,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Airport.cpp" />
+    <ClCompile Include="Flight.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Passenger.cpp" />
     <ClCompile Include="Place.cpp" />
     <ClCompile Include="Plane.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Airport.h" />
+    <ClInclude Include="Flight.h" />
+    <ClInclude Include="Passenger.h" />
     <ClInclude Include="Place.h" />
     <ClInclude Include="Plane.h" />
   </ItemGroup>
