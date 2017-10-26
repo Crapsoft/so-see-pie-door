@@ -9,7 +9,7 @@ Place::Place(string _Place_number) {
 }
 
 Place::Place(string _Place_number, bool _availability) {
-	Place_number.assign(Place_number);
+	Place_number.assign(_Place_number);
 	availability = _availability;
 }
 

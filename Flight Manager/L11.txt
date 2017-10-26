@@ -5,7 +5,7 @@ A4 true
 A5 true
 B1 true
 B2 true
-B3 true
+B3 false
 B4 true
 B5 true
 C1 true

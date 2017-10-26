@@ -1,6 +1,7 @@
 #include "Plane.h"
 #include <iterator>
-
+#include <fstream>
+#include <sstream>
 
 Plane::Plane(string _bortnumber)
 {
@@ -15,44 +16,33 @@ Plane::Plane(string _bortnumber)
 
 	string line;
 	string word;
+	
+	vector<string> words;
 
-	vector<string> v;
 	while (!ifs.eof())
 	{
-		Place *p;
 		getline(ifs, line);
 		std::istringstream iss(line, std::istringstream::in);
+
 		while (iss >> word)
 		{
-			v.push_back(word);
+			words.push_back(word);
 		}
-		if (v[1] == "true")
+		if (words[1] == "true")
 		{
-			p = new Place(v[0], true);
+			places.push_back(new Place(words[0], true));
 		}
 		else
 		{
-			p = new Place(v[0], false);
-		}
-		places.push_back(*p);
-		//cout << v[0]<<" : "<<v[1]<<endl;
-		v.clear();
-	}
-}
-void Plane::print() {
-	for each (Place var in places)
-	{
-		cout << var.getPlace_number() << endl;
-	}
-}
-void main() {
-	Plane *p = new Plane("L11");
-	//p->print();
-	system("pause");
-}
+			places.push_back(new Place(words[0], false));
 
+		}
+		words.clear();
+	}
+}
 
 Plane::~Plane()
 {
-
+	places.clear();
+	bortnumber.assign("");
 }
