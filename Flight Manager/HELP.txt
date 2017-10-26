@@ -1,0 +1,9 @@
+Welcome to the Flight Manager program!
+You can use one of the following commands:
+
+/addPlane
+/addConection
+/addFlight
+/buyTicket - UNDER MAINTENANCE
+/help
+exit

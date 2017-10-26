@@ -95,7 +95,7 @@ void main()
 		}
 		else
 		{
-			cout << "This command doesn't exist.You should read help.Just write /help";
+			cout << "This command doesn't exist.You should read help.Just write /help \n";
 		}
 
 	}

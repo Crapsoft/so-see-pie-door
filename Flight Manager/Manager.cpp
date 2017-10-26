@@ -85,7 +85,7 @@ void Manager::help()
 	ifstream file;
 	file.open("HELP.txt");
 	string line;
-	while (file.eof())
+	while (!file.eof())
 	{
 		getline(file, line);
 		cout << line << endl;
