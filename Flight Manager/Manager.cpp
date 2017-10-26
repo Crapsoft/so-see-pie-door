@@ -1,6 +1,6 @@
 #include "Manager.h"
 #include <fstream>
-
+#include <sstream>
 
 Manager::Manager()
 {
@@ -80,16 +80,18 @@ void Manager::BuyTicket(Passenger *passenger,Flight *flight,Place *place) {
 	ticket.close();
 
 }
-//Test main
-//void main() {
-//	Manager *m = new Manager();
-//	Airport *a = new Airport("Pudong", "Shanghai");
-//	Plane* p = new Plane("L11");
-//	Airport *b = new Airport("Lviv", "Ukraine");
-//	m->addFlight(a,b,p,"11.08","9.10");
-//	system("pause");
-//}
-
+void Manager::help() 
+{
+	ifstream file;
+	file.open("HELP.txt");
+	string line;
+	while (file.eof())
+	{
+		getline(file, line);
+		cout << line << endl;
+	}
+	file.close();
+}
 Manager::~Manager()
 {
 }

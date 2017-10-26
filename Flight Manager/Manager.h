@@ -15,5 +15,6 @@ public:
 	void addFlight(Airport *A, Airport *B, Plane* plane, string departure, string arrival);
 	void BuyTicket(Passenger *passenger, Flight *flight, Place *place);
 	void showConnections();
+	void help();
 };
 
