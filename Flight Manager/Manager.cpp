@@ -30,6 +30,25 @@ void Manager::addPlane(string bortnumber) {
 	f << "\n" << bortnumber<<" "<< "true";
 	f.close();
 }
+void Manager::addConnection(string name, string location) 
+{
+	Airport *airport = new Airport(name, location);
+	ofstream newairport;
+	newairport.open("Connections.txt", ios::app);
+	newairport << "\n" << name << ":" << location;
+}
+void split(vector<string> dest, string str, char* delim)
+{
+	char* pTempStr = strdup(str.c_str());
+	char* pWord = strtok(pTempStr, delim);
+	while (pWord != NULL)
+	{
+		dest.push_back(pWord);
+		pWord = strtok(NULL, delim);
+	}
+
+	free(pTempStr);
+}
 //void main() {
 //	Manager *m = new Manager();
 //	m->addPlane("L12");

@@ -12,7 +12,7 @@ public:
 	Manager();
 	~Manager();
 	void addPlane(string bortnumber);
-	void addConnection();
+	void addConnection(string name, string location);
 	void addFlight();
 	void BuyTicket();
 };
