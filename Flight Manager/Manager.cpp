@@ -36,6 +36,7 @@ void Manager::addConnection(string name, string location)
 	ofstream newairport;
 	newairport.open("Connections.txt", ios::app);
 	newairport << airport->getName() << endl << airport->getLocation() << endl;
+	newairport.close();
 }
 void Manager::showConnections() {
 	fstream f;
@@ -48,18 +49,32 @@ void Manager::showConnections() {
 		getline(f, str2);
 		cout << str <<":"<<str2<< endl;
 	}
+	f.close();
 }
-void Manager::addFlight(Airport *A, Airport *B, Plane plane,string departure, string arrival ) {
+void Manager::addFlight(Airport *A, Airport *B, Plane* plane,string departure, string arrival ) {
 	Flight *flight = new Flight(A, B, plane, departure, arrival);
 	fstream newflight(A->getLocation() +"-"+ B->getLocation() + ".txt");
 	newflight << A->getName() << endl;
 	newflight << B->getName() << endl;
-	newflight << plane.getBortnumber() << endl;
+	newflight << plane->getBortnumber() << endl;
 	newflight << departure << endl;
 	newflight << arrival << endl;
+	newflight.close();
 }
-void Manager::BuyTicket() {
-	Passenger *passenger = new Passenger();
+void Manager::BuyTicket(Passenger *passenger,Flight *flight,Place *place) {
+	fstream ticket;
+	ticket.open(passenger->getName() + " " + passenger->getSurname() + ".txt");
+	ticket <<"Name:"<< passenger->getName() << endl;
+	ticket <<"Surname"<< passenger->getSurname() << endl;
+	ticket <<"Sex:"<< passenger->getSex() << endl;
+	ticket << "Nationality" << passenger->getNationality() << endl;
+	ticket << "Passport Number:" << passenger->getPassport_No() << endl;
+	ticket << "Birth Day:" << passenger->getDate_of_Birth() << endl;
+	ticket << "Phonenumber:" << passenger->getPhonenumber() << endl;
+	ticket << "Departure:" << flight->getPointA() << ":" << flight->getDeparture();
+	ticket << "Arrival:" << flight->getPointB() << ":" << flight->getArrival();
+	ticket.close();
+
 }
 
 //void main() {

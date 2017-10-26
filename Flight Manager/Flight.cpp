@@ -14,7 +14,21 @@ Flight::Flight(Airport* pointA, Airport*pointB, Plane* plane, string departure, 
 	this->departure = departure;
 	this->arrival = arrival;
 }
-
+string Flight::getPointA() {
+	return pointA->getName();
+}
+string Flight::getPointB() {
+	return pointB->getName();
+}
+string Flight::getDeparture() {
+	return departure;
+}
+string Flight::getArrival() {
+	return arrival;
+}
+Plane* Flight::getPlane() {
+	return plane;
+}
 Flight::~Flight()
 {
 }

@@ -17,6 +17,11 @@ protected:
 public:
 	Flight();
 	Flight(Airport* _pointA, Airport*_pointB, Plane* _plane, string departure, string arrival);
+	string getPointA();
+	string getPointB();
+	string getDeparture();
+	string getArrival();
+	Plane *getPlane();
 	~Flight();
 };
 
