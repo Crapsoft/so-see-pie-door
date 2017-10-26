@@ -11,7 +11,7 @@ protected:
 	bool availability;			// true means that place is free, false - place has been reserved or bought
 public:
 	//contructors
-
+	Place();
 	Place(string _Place_number);
 	Place(string _Place_number, bool _availability);
 

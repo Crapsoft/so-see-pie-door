@@ -1,6 +1,7 @@
 #include "Place.h"
 
-
+Place::Place() {
+}
 Place::Place(string _Place_number) {
 	Place_number = _Place_number;
 	availability = true;

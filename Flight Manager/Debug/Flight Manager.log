@@ -1,7 +1,3 @@
 ﻿  Plane.cpp
-  Place.cpp
-c:\users\захар\documents\github\so-see-pie-door\flight manager\place.cpp(8): error C2065: _availability: необъявленный идентификатор
-c:\users\захар\documents\github\so-see-pie-door\flight manager\place.cpp(19): error C2063: Place::availability: не является функцией
-c:\users\захар\documents\github\so-see-pie-door\flight manager\place.cpp(23): error C2063: Place::availability: не является функцией
-  main.cpp
-  Создание кода...
+  Flight Manager.vcxproj -> C:\Users\Admin\Documents\GitHub\so-see-pie-door\Flight Manager\Debug\Flight Manager.exe
+  Flight Manager.vcxproj -> C:\Users\Admin\Documents\GitHub\so-see-pie-door\Flight Manager\Debug\Flight Manager.pdb (Partial PDB)

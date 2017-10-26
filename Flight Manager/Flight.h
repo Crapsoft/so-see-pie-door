@@ -10,7 +10,7 @@ class Flight
 protected:
 	string pointA;
 	string pointB;
-	Plane plane;
+	//Plane *plane;
 	// departure Time Stamp
 	// arrival Time Stamp
 public:
