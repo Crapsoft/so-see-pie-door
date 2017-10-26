@@ -35,23 +35,36 @@ void Manager::addConnection(string name, string location)
 	Airport *airport = new Airport(name, location);
 	ofstream newairport;
 	newairport.open("Connections.txt", ios::app);
-	newairport << "\n" << name << ":" << location;
+	newairport << airport->getName() << endl << airport->getLocation() << endl;
 }
-void split(vector<string> dest, string str, char* delim)
-{
-	char* pTempStr = strdup(str.c_str());
-	char* pWord = strtok(pTempStr, delim);
-	while (pWord != NULL)
+void Manager::showConnections() {
+	fstream f;
+	string str;
+	string str2;
+	f.open("Connections.txt");
+	while (!f.eof())
 	{
-		dest.push_back(pWord);
-		pWord = strtok(NULL, delim);
+		getline(f, str);
+		getline(f, str2);
+		cout << str <<":"<<str2<< endl;
 	}
-
-	free(pTempStr);
 }
+void Manager::addFlight(Airport *A, Airport *B, Plane plane,string departure, string arrival ) {
+	Flight *flight = new Flight(A, B, plane, departure, arrival);
+	fstream newflight(A->getLocation() +"-"+ B->getLocation() + ".txt");
+	newflight << A->getName() << endl;
+	newflight << B->getName() << endl;
+	newflight << plane.getBortnumber() << endl;
+	newflight << departure << endl;
+	newflight << arrival << endl;
+}
+void Manager::BuyTicket() {
+	Passenger *passenger = new Passenger();
+}
+
 //void main() {
 //	Manager *m = new Manager();
-//	m->addPlane("L12");
+//	m->showConnections();
 //	/*Plane *p = new Plane("M2",1);*/
 //	system("pause");
 //}

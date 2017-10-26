@@ -6,11 +6,13 @@ Flight::Flight()
 {
 }
 
-Flight::Flight(string _pointA, string _pointB, Plane _plane)
+Flight::Flight(Airport* pointA, Airport*pointB, Plane* plane, string departure, string arrival)
 {
-	this->pointA = _pointA;
-	this->pointB = _pointB;
-	//this->plane = _plane;
+	this->pointA = pointA;
+	this->pointB = pointB;
+	this->plane = plane;
+	this->departure = departure;
+	this->arrival = arrival;
 }
 
 Flight::~Flight()

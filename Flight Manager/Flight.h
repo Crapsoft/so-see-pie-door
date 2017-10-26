@@ -2,20 +2,21 @@
 
 #include <string>
 #include "Plane.h"
+#include "Airport.h"
 
 using namespace std;
 
 class Flight
 {
 protected:
-	string pointA;
-	string pointB;
-	//Plane *plane;
-	// departure Time Stamp
-	// arrival Time Stamp
+	Airport*pointA;
+	Airport* pointB;
+	string departure;
+	string arrival;
+	Plane *plane;
 public:
 	Flight();
-	Flight(string _pointA, string _pointB, Plane _plane);
+	Flight(Airport* _pointA, Airport*_pointB, Plane* _plane, string departure, string arrival);
 	~Flight();
 };
 

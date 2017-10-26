@@ -71,7 +71,9 @@ Plane::Plane(string _bortnumber)
 vector<Place*> Plane::getPlaces() {
 	return places;
 }
-
+string Plane::getBortnumber() {
+	return bortnumber;
+}
 Plane::~Plane()
 {
 	places.clear();

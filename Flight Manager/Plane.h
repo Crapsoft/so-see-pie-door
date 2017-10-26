@@ -14,5 +14,6 @@ public:
 	Plane(string _bortnumber , int i);
 	Plane(string bortnumber);
 	vector<Place*> getPlaces();
+	string getBortnumber();
 	~Plane();
 };

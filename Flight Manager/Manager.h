@@ -7,13 +7,13 @@
 class Manager
 {
 private:
-
 public:
 	Manager();
 	~Manager();
 	void addPlane(string bortnumber);
 	void addConnection(string name, string location);
-	void addFlight();
+	void addFlight(Airport *A, Airport *B, Plane plane, string departure, string arrival);
 	void BuyTicket();
+	void showConnections();
 };
 
