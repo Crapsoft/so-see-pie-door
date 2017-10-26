@@ -11,7 +11,8 @@ private:
 	string bortnumber;
 	vector<Place*> places;
 public:
-	Plane();
+	Plane(string _bortnumber , int i);
 	Plane(string bortnumber);
+	vector<Place*> getPlaces();
 	~Plane();
 };

@@ -11,5 +11,9 @@ private:
 public:
 	Manager();
 	~Manager();
+	void addPlane(string bortnumber);
+	void addConnection();
+	void addFlight();
+	void BuyTicket();
 };
 

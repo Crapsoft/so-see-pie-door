@@ -1,7 +1,3 @@
-﻿  Plane.cpp
-c:\users\admin\documents\github\so-see-pie-door\flight manager\plane.cpp(22): warning C4101: p: неиспользованная локальная переменная
-c:\users\admin\documents\github\so-see-pie-door\flight manager\plane.cpp(45): warning C4018: <: несоответствие типов со знаком и без знака
-  Place.cpp
-  Создание кода...
+﻿  Manager.cpp
   Flight Manager.vcxproj -> C:\Users\Admin\Documents\GitHub\so-see-pie-door\Flight Manager\Debug\Flight Manager.exe
   Flight Manager.vcxproj -> C:\Users\Admin\Documents\GitHub\so-see-pie-door\Flight Manager\Debug\Flight Manager.pdb (Partial PDB)
