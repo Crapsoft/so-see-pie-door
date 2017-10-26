@@ -89,6 +89,14 @@ void main()
 		{
 
 		}
+		else if (choise == "exit")
+		{
+			cancel = false;
+		}
+		else
+		{
+			cout << "This command doesn't exist.You should read help.Just write /help";
+		}
 
 	}
 }
