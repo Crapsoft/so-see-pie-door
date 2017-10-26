@@ -53,7 +53,10 @@ void Manager::showConnections() {
 }
 void Manager::addFlight(Airport *A, Airport *B, Plane* plane,string departure, string arrival ) {
 	Flight *flight = new Flight(A, B, plane, departure, arrival);
-	fstream newflight(A->getLocation() +"-"+ B->getLocation() + ".txt");
+	string s = A->getLocation() +B->getLocation() + ".txt";
+	cout << s;
+	ofstream newflight;
+	newflight.open(s);
 	newflight << A->getName() << endl;
 	newflight << B->getName() << endl;
 	newflight << plane->getBortnumber() << endl;
@@ -62,7 +65,7 @@ void Manager::addFlight(Airport *A, Airport *B, Plane* plane,string departure, s
 	newflight.close();
 }
 void Manager::BuyTicket(Passenger *passenger,Flight *flight,Place *place) {
-	fstream ticket;
+	ofstream ticket;
 	ticket.open(passenger->getName() + " " + passenger->getSurname() + ".txt");
 	ticket <<"Name:"<< passenger->getName() << endl;
 	ticket <<"Surname"<< passenger->getSurname() << endl;
@@ -73,14 +76,17 @@ void Manager::BuyTicket(Passenger *passenger,Flight *flight,Place *place) {
 	ticket << "Phonenumber:" << passenger->getPhonenumber() << endl;
 	ticket << "Departure:" << flight->getPointA() << ":" << flight->getDeparture();
 	ticket << "Arrival:" << flight->getPointB() << ":" << flight->getArrival();
+	ticket << "Seat:" << place->getPlace_number();
 	ticket.close();
 
 }
-
+//Test main
 //void main() {
 //	Manager *m = new Manager();
-//	m->showConnections();
-//	/*Plane *p = new Plane("M2",1);*/
+//	Airport *a = new Airport("Pudong", "Shanghai");
+//	Plane* p = new Plane("L11");
+//	Airport *b = new Airport("Lviv", "Ukraine");
+//	m->addFlight(a,b,p,"11.08","9.10");
 //	system("pause");
 //}
 
