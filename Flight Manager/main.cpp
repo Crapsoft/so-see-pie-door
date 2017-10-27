@@ -13,6 +13,9 @@ void main()
 	bool cancel = true;
 	Manager *manager = new Manager();
 	string choice;
+
+	cout << "Hello! You can start working, or call help using /help command \n\n";
+
 	while (cancel)
 	{
 		cin >> choice;
