@@ -12,32 +12,32 @@ void main()
 {
 	bool cancel = true;
 	Manager *manager = new Manager();
-	string choise;
+	string choice;
 	while (cancel)
 	{
-		cin >> choise;
-		if (choise == "/help")
+		cin >> choice;
+		if (choice == "/help")
 		{
 			manager->help();
 		}
-		else if (choise == "/addPlane")
+		else if (choice == "/addPlane")
 		{
 			string bortnumber;
-			cout << "Please,input bortnumber";
+			cout << "Please,input bortnumber" << endl;
 			cin >> bortnumber;
 			manager->addPlane(bortnumber);
 		}
-		else if(choise == "/addConection")
+		else if(choice == "/addConection")
 		{
 			string name;
 			string location;
-			cout << "Please,input name of the airport:" << endl;
+			cout << "Please,input the name of the airport:" << endl;
 			cin >> name;
 			cout << "Now,input location"<<endl;
 			cin >> location;
 			manager->addConnection(name,location);
 		}
-		else if(choise == "/addFlight")
+		else if(choice == "/addFlight")
 		{
 			cout << "Your available connections are:" << endl;
 			manager->showConnections();
@@ -102,7 +102,7 @@ void main()
 		//	//ifstream f(flight + ".txt");
 		//	Flight *flight = new Flight(flight + ".txt");
 		//}
-		else if(choise == "/addPassanger")
+		else if(choice == "/addPassanger")
 		{
 			Passenger *passenger = new Passenger();
 			string line;
@@ -129,7 +129,7 @@ void main()
 			passenger->setPhonenumber(line);
 			manager->addPassenger(passenger);
 		}
-		else if (choise == "exit")
+		else if (choice == "exit")
 		{
 			cancel = false;
 		}
