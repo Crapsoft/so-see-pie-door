@@ -44,17 +44,19 @@ void main()
 		{
 			cout << "Your available connections are:" << endl;
 			manager->showConnections();
-			cout << endl << "Input Departure place" << endl;
+			cout << endl << "Input Airport1 name" << endl;
 			string name1;
-			string departure_loc;
 			cin >> name1;
+			cout << endl << "Input Airport1 location" << endl;
+			string departure_loc;
 			cin >> departure_loc;
-			Airport *pointA = new Airport(name1, departure_loc);
-			cout << endl << "Input Arrival place" << endl;
+			cout << endl << "Input Airport2 name" << endl;
 			string name2;
-			string arrival_loc;
 			cin >> name2;
+			cout << endl << "Input Airport2 location" << endl;
+			string arrival_loc;
 			cin >> arrival_loc;
+			Airport *pointA = new Airport(name1, departure_loc);
 			Airport *pointB = new Airport(name2, arrival_loc);
 			cout << "Available planes for new flight" << endl;
 			fstream f;
@@ -75,6 +77,7 @@ void main()
 				{
 					cout << words[0] << endl;					
 				}
+				words.clear();
 			}
 			cout << "Choose plane:" << endl;
 			cin >> name1;
