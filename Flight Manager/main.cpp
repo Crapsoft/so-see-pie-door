@@ -29,6 +29,7 @@ void main()
 			cout << "Please,input bortnumber" << endl;
 			cin >> bortnumber;
 			manager->addPlane(bortnumber);
+			cout << "File has been created" << endl;
 		}
 		else if(choice == "/addConection")
 		{
@@ -39,22 +40,23 @@ void main()
 			cout << "Now,input location"<<endl;
 			cin >> location;
 			manager->addConnection(name,location);
+			cout << "File has been updated" << endl;
 		}
 		else if(choice == "/addFlight")
 		{
 			cout << "Your available connections are:" << endl;
 			manager->showConnections();
-			cout << endl << "Input Airport1 name" << endl;
 			string name1;
+			string departure_loc;
+			string name2;
+			string arrival_loc;
+			cout << endl << "Input Airport1 name" << endl;
 			cin >> name1;
 			cout << endl << "Input Airport1 location" << endl;
-			string departure_loc;
 			cin >> departure_loc;
 			cout << endl << "Input Airport2 name" << endl;
-			string name2;
 			cin >> name2;
 			cout << endl << "Input Airport2 location" << endl;
-			string arrival_loc;
 			cin >> arrival_loc;
 			Airport *pointA = new Airport(name1, departure_loc);
 			Airport *pointB = new Airport(name2, arrival_loc);
@@ -90,6 +92,7 @@ void main()
 			cin >> arrival;
 			manager->addFlight(pointA, pointB, plane, departure, arrival);
 			f.close();
+			cout << "File has been created" << endl;
 		}
 		//else if(choise == "/buyTicket")
 		//{
@@ -108,7 +111,7 @@ void main()
 		//	//ifstream f(flight + ".txt");
 		//	Flight *flight = new Flight(flight + ".txt");
 		//}
-		else if(choice == "/addPassanger")
+		else if(choice == "/addPassenger")
 		{
 			Passenger *passenger = new Passenger();
 			string line;
@@ -130,10 +133,11 @@ void main()
 			cout << "Input Date of Birth" << endl;
 			cin >> line;
 			passenger->setDate_of_Birth(line);
-			cout << "Input phinenumber" << endl;
+			cout << "Input phone number" << endl;
 			cin >> line;
 			passenger->setPhonenumber(line);
 			manager->addPassenger(passenger);
+			cout << "File has been created"<<endl;
 		}
 		else if (choice == "exit")
 		{

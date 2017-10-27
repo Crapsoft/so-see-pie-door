@@ -1,10 +1,10 @@
-Pudong International Airport
-Shanghai,China
-Boryspil International Airport
-Kyiv,Ukraine
-Vienna International Airport
-Vienna,Austria
-Lviv International Airport
-Lviv Ukraine
-Tivat International Airport
-Tivat,Montenegro
+Pudong_International_Airport
+Shanghai_China
+Boryspil_International_Airport
+Kyiv_Ukraine
+Vienna_International_Airport
+Vienna_Austria
+Lviv_International_Airport
+Lviv_Ukraine
+Tivat_International_Airport
+Tivat_Montenegro
