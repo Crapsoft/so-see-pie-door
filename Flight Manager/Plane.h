@@ -15,5 +15,6 @@ public:
 	Plane(string bortnumber);
 	vector<Place*> getPlaces();
 	string getBortnumber();
+	void update(string seat);
 	~Plane();
 };

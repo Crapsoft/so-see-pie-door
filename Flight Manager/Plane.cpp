@@ -74,6 +74,31 @@ vector<Place*> Plane::getPlaces() {
 string Plane::getBortnumber() {
 	return bortnumber;
 }
+void Plane::update(string seat) {
+	for each (Place* var in places)
+	{
+		if (var->getPlace_number() == seat)
+		{
+			var->setAvailability(false);
+		}
+	}
+	fstream newplane;
+	newplane.open(bortnumber + ".txt");
+
+	for each (Place* var in places)
+	{
+		if (var->getAvailability() == true)
+		{
+			newplane << var->getPlace_number() << " " << "true" << endl;
+		}
+		else
+		{
+			newplane << var->getPlace_number() << " " << "false" << endl;
+		}
+	}
+	newplane.close();
+
+}
 Plane::~Plane()
 {
 	places.clear();

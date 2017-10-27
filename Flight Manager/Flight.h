@@ -15,7 +15,7 @@ protected:
 	string arrival;
 	Plane *plane;
 public:
-	Flight();
+	Flight(string _path);
 	Flight(Airport* _pointA, Airport*_pointB, Plane* _plane, string departure, string arrival);
 	string getPointA();
 	string getPointB();

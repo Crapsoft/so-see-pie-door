@@ -1,10 +1,21 @@
 #include "Flight.h"
-
+#include <fstream>
 using namespace std;
-
-Flight::Flight()
-{
-}
+//
+//Flight::Flight(string _path)
+//{
+//	fstream f(_path);
+//	string line;
+//	while (!f.eof())
+//	{
+//		getline(f, line);
+//		this->pointA = line;
+//		this->pointB = pointB;
+//		this->plane = plane;
+//		this->departure = departure;
+//		this->arrival = arrival;
+//	}
+//}
 
 Flight::Flight(Airport* pointA, Airport*pointB, Plane* plane, string departure, string arrival)
 {

@@ -85,9 +85,49 @@ void main()
 			manager->addFlight(pointA, pointB, plane, departure, arrival);
 			f.close();
 		}
-		else if(choise == "/buyTicket")
+		//else if(choise == "/buyTicket")
+		//{
+		//	cout << "Flights:" << endl;
+		//	fstream f("Flights.txt");
+		//	string str;
+		//	while (!f.eof())
+		//	{
+		//		getline(f, str);
+		//		cout << str << endl;
+		//	}
+		//	f.close();
+		//	cout << "Choose flight:" << endl;
+		//	string flight;
+		//	cin >> flight;
+		//	//ifstream f(flight + ".txt");
+		//	Flight *flight = new Flight(flight + ".txt");
+		//}
+		else if(choise == "/addPassanger")
 		{
-
+			Passenger *passenger = new Passenger();
+			string line;
+			cout << "Input name" << endl;
+			cin >> line;
+			passenger->setName(line);
+			cout << "Input surname" << endl;
+			cin >> line;
+			passenger->setSurname(line);
+			cout << "Input sex" << endl;
+			cin >> line;
+			passenger->setSex(line);
+			cout << "Input nationality" << endl;
+			cin >> line;
+			passenger->setNationality(line);
+			cout << "Input Passport number" << endl;
+			cin >> line;
+			passenger->setPassport_No(line);
+			cout << "Input Date of Birth" << endl;
+			cin >> line;
+			passenger->setDate_of_Birth(line);
+			cout << "Input phinenumber" << endl;
+			cin >> line;
+			passenger->setPhonenumber(line);
+			manager->addPassenger(passenger);
 		}
 		else if (choise == "exit")
 		{
@@ -95,7 +135,7 @@ void main()
 		}
 		else
 		{
-			cout << "This command doesn't exist.You should read help.Just write /help";
+			cout << "This command doesn't exist.You should read help.Just write /help \n";
 		}
 
 	}
