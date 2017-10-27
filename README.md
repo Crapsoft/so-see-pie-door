@@ -7,9 +7,13 @@ It runs freely on any platform (Visual Studio 2017 required).
 
 Members:
 -Sydoriv Maxym
+
 -Petronchack Zakhar
+
 -Vasyl'chack Olena
+
 -Labenskyi Danylo
+
 -Starovoyt Vladyslav
 
 Please use our software. We are always hapy to provide you with the best software, and it makes me happy to know that lives of thousands of people depend on the product we have developed.
