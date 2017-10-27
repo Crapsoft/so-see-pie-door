@@ -34,3 +34,6 @@ Historically, airlines only used a few codes, and these were almost identical ac
 Most low-cost carriers have greatly simplified the fare classes they use to only a few codes, unlike full-service airlines, which use many more.
 
 If you are interested, you can support us on Patreon or send us money directly via PayPal.
+
+# Glory to Ukraine!
+
